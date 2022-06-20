@@ -1,14 +1,12 @@
-import React from 'react';
-
 interface IButtonProps {
 	label: string;
 	onButtonClick: () => any;
-	type: 'CTA' | 'Secondary';
+	type: keyof typeof buttonTypes;
 }
 
 const buttonTypes = {
-	CTA: 'btn',
-	Secondary: 'btn-ghost',
+	primary: 'btn',
+	secondary: 'btn-ghost',
 };
 
 export default function Button({ label, onButtonClick, type }: IButtonProps) {
