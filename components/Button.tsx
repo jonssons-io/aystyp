@@ -1,18 +1,14 @@
-interface IButtonProps {
-	label: string;
-	onButtonClick: () => any;
-	type: keyof typeof buttonTypes;
-}
+import { ButtonHTMLAttributes } from 'react';
 
-const buttonTypes = {
+const buttonVariant = {
 	primary: 'btn',
 	secondary: 'btn-ghost',
 };
 
-export default function Button({ label, onButtonClick, type }: IButtonProps) {
-	return (
-		<button className={buttonTypes[type]} onClick={onButtonClick}>
-			{label}
-		</button>
-	);
+interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+	variant: keyof typeof buttonVariant;
+}
+
+export default function Button({ variant, ...props }: IButtonProps) {
+	return <button {...props} className={buttonVariant[variant]} />;
 }
