@@ -1,0 +1,34 @@
+.btn {
+	@apply bg-main-purple-200 
+        hover:bg-main-purple-300 
+        text-white 
+        font-sans 
+        text-base 
+        font-bold 
+        py-2 
+        px-4 
+        rounded
+        flex
+        flex-row
+        justify-between
+        gap-4;
+}
+
+.btn-ghost {
+	@apply bg-transparent 
+        hover:bg-main-purple-300 
+        text-white 
+        font-sans 
+        text-base 
+        font-bold 
+        py-2 
+        px-4 
+        border-2 
+        border-main-purple-200 
+        hover:border-transparent 
+        rounded
+        flex
+        flex-row
+        justify-between
+        gap-4;
+}
