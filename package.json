@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "node server",
     "build": "next build",
-    "start": "NODE_ENV=production node server",
-    "lint": "next lint"
+    "start": "env NODE_ENV=production node server",
+    "lint": "eslint . && stylelint styles/**/*.css",
+    "test": "jest"
   },
   "dependencies": {
     "next": "12.1.6",
@@ -15,11 +16,26 @@
     "socket.io": "^4.5.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@types/jest": "^28.1.3",
     "@types/node": "18.0.0",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "babel-jest": "^28.1.1",
     "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-prettier": "^2.0.0",
     "typescript": "4.7.4"
   }
 }

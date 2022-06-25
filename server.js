@@ -14,12 +14,10 @@ const requestHandler = app.getRequestHandler();
 const httpServer = createServer(requestHandler);
 const io = new Server(httpServer);
 
-io.on('connection', (socket) => {
-
-});
+io.on('connection', (socket) => {});
 
 app.prepare().then(() => {
   httpServer.listen(port, () => {
-    console.log(`listening on port ${port}`);
+    console.log(`listening on port ${httpServer.address().port}`);
   });
 });
